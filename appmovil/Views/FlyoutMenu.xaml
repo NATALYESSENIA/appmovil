@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appmovil.Views.FlyoutMenu"
+             xmlns:local="clr-namespace:appmovil.Views"
+             Title="FlyoutMenu"
+            FlyoutLayoutBehavior="Popover">
+    <FlyoutPage.Flyout>
+        <local:FlyoutMenu x:Name="menus"></local:FlyoutMenu>
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+        <local:Principal x:Name="detalle"></local:Principal>
+    </FlyoutPage.Detail>
+
+    
+        
+</FlyoutPage>

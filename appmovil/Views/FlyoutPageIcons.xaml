@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appmovil.Views.FlyoutPageIcons"
+             xmlns:local="clr-namespace:appmovil"
+             xmlns:local1="clr-namespace:appmovil.Views"
+             xmlns:local2="clr-namespace:appmovil.Models"
+             Title="FlyoutPageIcons">
+    
+    <CollectionView x:Name="collectionView"
+                 x:FieldModifier="public"
+                 SelectionMode="Single">
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type local2:FlyoutPageItem}">
+                <local2:FlyoutPageItem Title="INICIO"
+                                    IconSource="popeyes.png"
+                                    TargetType="{x:Type local2:Principal}"
+                                    />
+                <local2:FlyoutPageItem Title="VER CARTA"
+                                    IconSource="popeyes.png"
+                                    TargetType="{x:Type local1:Geslabo}"
+                                    />
+                <local2:FlyoutPageItem Title="PEDIDOS"
+                                    IconSource="popeyes.png"
+                                    TargetType="{x:Type local1:Principal}"/>
+            </x:Array>
+        </CollectionView.ItemsSource>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="5,18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="38"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding IconSource}"/>
+                    <Label Grid.Column="1"
+                        Margin="28,0"
+                        Text="{Binding Title}"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"/>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
